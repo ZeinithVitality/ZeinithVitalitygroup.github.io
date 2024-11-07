@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Session | Zenith Vitality Group</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: black;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            color: gold;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .booking-form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: black;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn-submit {
+            padding: 10px 20px;
+            color: white;
+            background-color: gold;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-submit:hover {
+            background-color: #d4af37;
+        }
+
+        
+    .book-session-btn {
+        padding: 10px 20px;
+        background-color: gold;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .book-session-btn:hover {
+        background-color: #d4af37;
+    }
+
+
+    </style>
+</head>
+<body>
+
+   
+ <header>
+        <h2>Zenith Vitality Group - Book Your Session</h2>
+    </header>
+
+    <main>
+        <h1>Book Your Session</h1>
+        <div class="booking-form">
+            <form  method="POST"  action="Send_Booking.php">
+                
+                <!-- Option to Remain Anonymous -->
+                <div class="form-group">
+                    <label for="anonymity">Do you wish to remain anonymous?</label>
+                    <select id="anonymity" name="anonymity" required onchange="toggleNameField(this)">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+
+                <!-- Name Field (Only visible if 'No' is selected) -->
+                <div class="form-group" id="name-field" style="display:none;">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+
+                <div class="form-group">
+                    <label for="date">Preferred Booking Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <!-- Session Type (Online or Face-to-Face) -->
+                <div class="form-group">
+                    <label for="session-type">Do you prefer an online or face-to-face session?</label>
+                    <select id="session-type" name="session_type" required>
+                        <option value="Online">Online</option>
+                        <option value="Face-to-Face">Face-to-Face</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Select a Service:</label>
+                    <select id="service" name="service" required>
+                        <option value="Pre-Marital">Pre-Marital</option>
+                        <option value="Post-Marital">Post-Marital</option>
+                        <option value="Counseling Services">Counseling Services</option>
+                        <option value="addictions">Addictions</option>
+                        <option value="trauma">Trauma</option>
+                        <option value="depression">Depression</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="relationship-issues">Relationship Issues</option>
+                        <option value="ptsd">Post-Traumatic Stress Disorder (PTSD)</option>
+                        <option value="bpd">Borderline Personality Disorder</option>
+                        <option value="schizophrenia">Schizophrenia</option>
+                        <option value="schizophrenia">Life Couching</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Notes (Optional):</label>
+                    <textarea id="message" name="message" placeholder="Any additional requests..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Submit Booking</button>
+            </form>
+        </div>
+
+        <a href="Index.html" class="back-button">Back</a>
+    </main>
+
+    <script>
+        function toggleNameField(select) {
+            const nameField = document.getElementById('name-field');
+            if (select.value === 'No') {
+                nameField.style.display = 'block';
+            } else {
+                nameField.style.display = 'none';
+                document.getElementById('name').value = '';  // Clear the name field if anonymous
+            }
+        }
+    </script>
+
+</body>
+</html>

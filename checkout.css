@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: black; /* Light grey background */
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    
+
+}
+
+h1, h2 {
+    text-align: center;
+    color: yellow; /* Black text */
+}
+
+p{
+    color:white;
+    text-align: center;
+}
+
+p2{
+    color:white;
+    text-align:center;
+    background-color: red;
+}
+
+p3{
+    color:black;
+    background-color: yellow;
+}
+.frame{
+    width:60%;
+    padding: 20px;
+    border: 5px solid #333;
+    border-radius: 15px;
+    background-color: rgb(43, 43, 43);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+#checkout-summary, #invoice {
+    margin: 20px auto; /* Center the boxes */
+    padding: 20px;
+    border: 1px solid black; /* Dark grey border */
+    border-radius: 8px;
+    background-color: grey; /* White background for boxes */
+    max-width: 400px; /* Set a max width for the boxes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    color: blue;
+    text-align: center;
+}
+
+#invoice-details {
+    margin-top: 20px;
+    color: black;
+}
+
+button {
+    background-color: yellow; /* Yellow button */
+    color: black; /* Black text */
+    border: none;
+    padding: 20px 0px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block; /* Center button */
+    margin: 20px auto; /* Center button */
+    width: 15%; /* Button width */
+}
+
+button:hover {
+    background-color: black; /* Dark grey on hover */
+    color: yellow; /* Change text color to white on hover */
+}
+
+#checkout-summary p, #invoice p {
+    text-align: right; /* Center align text within the boxes */
+    margin: 10px 0; /* Margin for spacing */
+}

@@ -1,0 +1,13 @@
+{
+    "name": "vitality/zein",
+    "description": "A simple project for sending emails",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zeinithvitalitygroup"
+        }
+    ]
+}

@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.table-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between elements */
+    align-items: flex-start; /* Aligns items to the top */
+}
+
+table {
+    width: 60%; /* Adjusts the width of the table */
+    border-collapse: collapse;
+    margin-right: 20px; /* Adds space between table and form */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.product-form {
+    width: 35%; /* Adjusts the width of the form */
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: black;
+}
+
+.product-item {
+    margin-bottom: 15px;
+}
+
+.total-display {
+    font-weight: bold;
+    margin-top: 20px;
+    color: white;
+}
+
+button {
+    background-color: #d4af37; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #d4af37; /* Darker green on hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.appointment-booking {
+    margin: 20px ;
+    padding: 20px 100px;
+    border: 1px solid darkgrey;
+    border-radius: 8px;
+    background-color: black;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position:sticky;
+    top:90%;
+    left:62%;
+    width: 45%;
+}
+
+.appointment-booking h2 {
+    color: d4af37;
+}
+
+.appointment-booking label, .appointment-booking input, .appointment-booking select {
+    display: block;
+    margin: 10px auto;
+    width: 90%;
+}
+
+#appointment-date, #appointment-time, #address, #appointment-type {
+    padding: 8px;
+    border: 1px solid darkgrey;
+    border-radius: 4px;
+}
+
+#booking-summary {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid darkgrey;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.appointment-booking, .drip-selection {
+    margin-bottom: 20px; /* Space between sections */
+    clear: both; /* Prevent overlapping */
+}
+
+/* For drip selection form */
+.drip-selection {
+    display: block;
+    margin-bottom: 20px;
+}
+
+button.add-drip {
+    display: block;
+    margin-top: 20px 0; /* Ensure there's space between button and other elements */
+}

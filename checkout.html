@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="checkout.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <h1>Checkout</h1>
+   <div class="frame">
+    <div id="checkout-summary">
+        <p>Total Items: <span id="checkout-total-items"></span></p>
+        <p>Total Price: R<span id="checkout-total-price"></span></p>
+    </div>
+
+    <h2>Invoice Details</h2>
+    <div id="invoice-details"></div>
+    <p3>Total: R<span id="invoice-total"></span></p3>
+
+    <h2>Company Details</h2>
+    <p>Name: Zeinith Vitality Group</p>
+    <p2>Bank Details</p2>
+    <p>Account name: ZIENITH VITALITY GROUP (PTY)LTD</p>
+    <P>Account number: 4113905058</P>
+    <p>Branch code: 632005</p>
+    <p>Account Type: Current Account</p>
+    <p2>Payment Instructions:</p2> 
+    <p>Please transfer the total amount to the provided bank details </p>
+    <p>and email us proof of payment at payments @zeinithvitalitygroup.com.</p>
+
+    <!-- Button to send invoice via email -->
+    <button id="send-invoice">Send Invoice</button>
+
+    <script>
+        // Retrieve cart data from localStorage
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        // Calculate total items and total price
+        const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+        const totalPrice = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+
+        // Display the totals
+        document.getElementById('checkout-total-items').innerText = totalItems;
+        document.getElementById('checkout-total-price').innerText = totalPrice;
+
+        // Display invoice details
+        const invoiceDetailsDiv = document.getElementById('invoice-details');
+        cart.forEach(item => {
+            const productDetail = document.createElement('p');
+            productDetail.innerText = `${item.quantity} x ${item.name} - R${item.price * item.quantity}`;
+            invoiceDetailsDiv.appendChild(productDetail);
+        });
+
+        document.getElementById('invoice-total').innerText = totalPrice;
+
+        // Add event listener for send invoice button
+        document.getElementById('send-invoice').addEventListener('click', () => {
+            alert('Invoice has been sent!'); // Replace this with actual email sending logic
+        });
+    </script>
+    </div>
+    <footer>
+        <p>&copy; 2024 Zenith Vitality Group. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IV Drips & Skincare Cart</title>
+    <style>
+        /* Add basic styles */
+        .cart-item { display: flex; justify-content: space-between; padding: 10px 0; }
+        .cart-item img { width: 50px; height: 50px; }
+        .cart-summary { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Your Cart</h1>
+
+    <!-- Cart Items -->
+    <div id="cart-items"></div>
+
+    <!-- Cart Summary -->
+    <div class="cart-summary">
+        <p>Total Items: <span id="total-items">0</span></p>
+        <p>Total Price: $<span id="total-price">0.00</span></p>
+    </div>
+
+    <!-- Checkout Button -->
+    <button id="checkout-button">Proceed to Checkout</button>
+
+    <!-- Add script to handle cart and checkout functionalities -->
+    <script>
+        // Sample product data
+        const products = {
+            ivDrips: [
+                { id: 1, name: "Anti-Aging Drip", price: 150, img: "path/to/anti-aging-drip.jpg" },
+                { id: 2, name: "Skin Glow-Up Drip", price: 120, img: "path/to/skin-glow-up-drip.jpg" },
+                { id: 3, name: "Rehydration Boost", price: 100, img: "path/to/rehydration-boost.jpg" },
+            ],
+            skincareSolutions: [
+                { id: 4, name: "Luxury Face Cream", price: 80, img: "path/to/luxury-face-cream.jpg" },
+                { id: 5, name: "Radiance Serum", price: 95, img: "path/to/radiance-serum.jpg" },
+            ]
+        };
+
+        // Cart storage
+        let cart = [];
+
+        // Function to display products in the cart
+        function displayCartItems() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = ""; // Clear existing items
+
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('cart-item');
+                itemElement.innerHTML = `
+                    <img src="${item.img}" alt="${item.name}">
+                    <p>${item.name}</p>
+                    <p>Price: $${item.price}</p>
+                    <p>Quantity: <input type="number" value="${item.quantity}" min="1" onchange="updateQuantity(${item.id}, this.value)"></p>
+                    <button onclick="removeFromCart(${item.id})">Remove</button>
+                `;
+                cartItemsContainer.appendChild(itemElement);
+            });
+
+            updateCartSummary();
+        }
+
+        // Function to update the quantity of an item
+        function updateQuantity(id, quantity) {
+            const item = cart.find(i => i.id === id);
+            if (item) {
+                item.quantity = Number(quantity);
+                updateCartSummary();
+            }
+        }
+
+        // Function to remove an item from the cart
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            displayCartItems();
+        }
+
+        // Function to update the cart summary
+        function updateCartSummary() {
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+
+            document.getElementById('total-items').innerText = totalItems;
+            document.getElementById('total-price').innerText = totalPrice.toFixed(2);
+        }
+
+        // Function to handle checkout
+        document.getElementById('checkout-button').onclick = function() {
+            if (cart.length > 0) {
+                window.location.href = "checkout.html"; // Redirect to checkout page
+            } else {
+                alert("Your cart is empty.");
+            }
+        };
+
+        // Function to add products to the cart (called from product page)
+        function addToCart(productId) {
+            const product = [...products.ivDrips, ...products.skincareSolutions].find(p => p.id === productId);
+            if (product) {
+                const cartItem = cart.find(item => item.id === productId);
+                if (cartItem) {
+                    cartItem.quantity++;
+                } else {
+                    cart.push({ ...product, quantity: 1 });
+                }
+                displayCartItems();
+            }
+        }
+    </script>
+</body>
+</html>
+
+
