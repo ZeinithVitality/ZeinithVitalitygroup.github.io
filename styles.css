@@ -100,6 +100,7 @@ header .hero-content p {
     padding: 40px 20px;
     background-color: darkgrey;
     text-align: center;
+    width: 100%;
     color: #f0e68c;
     display: inline-block;
     padding: 5px;
@@ -171,7 +172,7 @@ header .hero-content p {
     border-radius: 40px;
     transition: transform 0.3s ease;
     object-position: 90%;
-    width: 100%;
+    max-width: 100%;
     height: auto;
      
     
