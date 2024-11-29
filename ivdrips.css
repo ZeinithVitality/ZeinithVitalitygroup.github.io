@@ -221,6 +221,11 @@ footer {
     .appointment-booking .button .appointment-link {
         padding: 15px 10px; /* Reduce padding */
         font-size: 14px; /* Adjust font size */
+         position:sticky;
+        bottom:90%;
+        right:50%;
+        width:45%;
+    }
     }
 }
 
