@@ -92,96 +92,21 @@
         </tbody>
         </table>
 
-        <div class="product-form">
-            <div class= "drip-selection">
-            <h2>Select Your Drips</h2>
-            <div class="product-selection" id="product-selections">
-                <div class="product-item" id="product-item-1">
-                    <label for="product-select-1">Choose a product:</label>
-                    <select id="product-select-1" onchange="updatePrice(1)">
-                        <option value="0" data-price="0">Select a drip...</option>
-                        <option value="490" data-price="490">Weight Loss Fat Burner Drip (200ml) - R490</option>
-                        <option value="980" data-price="980">Weight Loss Fat Burner Drip (1L) - R980</option>
-                        <option value="450" data-price="450">Immune Boost Drip (200ml) - R450</option>
-                        <option value="800" data-price="800">Immune Boost Drip (1L) - R800</option>
-                        <option value="900" data-price="900">Jet Fuel Drip (200ml) - R900</option>
-                        <option value="1100" data-price="1100">Jet Fuel Drip (1L) - R1100</option>
-                        <option value="Rehydration Drip (200ml)" data-price="250">Rehydration Drip (200ml) - R250</option>
-                        <option value="Rehydration Drip (1l)" data-price="300">Rehydration Drip (1l) - R300</option>
-
-                        <option value="Detox Drip (200ml)" data-price="500">Detox Drip (200ml) - R500</option>
-                        <option value="Detox Drip (1l)" data-price="800">Detox Drip (1l) - R800</option>
-
-                        <option value="Multi-Vitamin Drip (200ml)" data-price="1000">Multi-Vitamin Drip (200ml) - R1000</option>
-                        <option value="Multi-Vitamin Drip (1l)" data-price="18000">Multi-Vitamin Drip (1l) - R18000</option>
-
-                        <option value="Sport Vitality & Recovery Drip (200ml)" data-price="800">Sport Vitality & Recovery Drip (200ml) - R800</option>
-                        <option value="Sport Vitality & Recovery Drip (1l)" data-price="1100">Sport Vitality & Recovery Drip (1l) - R1100</option>
-
-                        <option value="Hangover & Jet Lag Drip (200ml)" data-price="1000">Hangover & Jet Lag Drip (200ml) - R1000</option>
-                        <option value="Hangover & Jet Lag Drip (1l)" data-price="1050">Hangover & Jet Lag Drip (1l) - R1050</option>
-
-                        <option value="Menopause Assist Drip (200ml)" data-price="1100">Menopause Assist Drip (200ml) - R1100</option>
-                        <option value="Menopause Assist Drip (1l)" data-price="1200">Menopause Assist Drip (1l) - R1200</option>
-
-                        <option value="Libido Drip (200ml)" data-price="R980">Libido Drip (200ml) - R980 </option>
-                        <option value="Libido Drip (1l)" data-price="R1200">Libido Drip (1l) - R1200 </option>  
-
-                        <option value="Menstrual Assist Drip (200ml)" data-price="R850">Menstrual Assist Drip (200ml) - R850</option>
-                        <option value="Menstrual Assist Drip (200ml)" data-price="R1100">Menstrual Assist Drip (1l) - R1100</option>
-                    </select>
-
-                    </select>
-
-                    <label for="quantity-1">Quantity:</label>
-                    <input type="number" id="quantity-1" value="1" min="1" onchange="calculateTotal()">
-
-                  <div class="ng"><p>Price: R<span id="price-1">0</span></p> </div>
-                </div>
-            </div>
-                <div class="button.add-drip">
-            <button onclick="addProduct()">Add Another Drip</button>
-             </div>
-            <div class="total-display">
-                <p>Total: R<span id="grand-total">0</span></p>
-            </div>
-            <button onclick="checkout()">Proceed to Checkout</button>
-        </div>
-
+        
         <div class="appointment-booking">
             <h2>Book Your Appointment</h2>
-            
-            <!-- Appointment Type Selection -->
-            <label for="appointment-type">Choose Appointment Type:</label>
-            <select id="appointment-type" required>
-                <option value="" disabled selected>Select an option</option>
-                <option value="on-site">On-site</option>
-                <option value="house-call">House Call</option>
-                <option value="office-call">Office Call</option>
-            </select>
-            
-            <!-- Date and Time Inputs -->
-            <label for="appointment-date">Choose Date:</label>
-            <input type="date" id="appointment-date" required>
-            
-            <label for="appointment-time">Choose Time:</label>
-            <input type="time" id="appointment-time" required>
-            
-            <!-- Address for House and Office Calls -->
-            <div id="address-section" style="display: none;">
-                <label for="address">Enter Address (for house/office calls):</label>
-                <input type="text" id="address" placeholder="Enter your address">
-            </div>
-            
-            <!-- Book Button -->
-            <button onclick="bookAppointment()">Book Appointment</button>
-        
-            <!-- Booking Summary -->
-            <div id="booking-summary" style="display: none;">
-                <h3>Your Appointment</h3>
-                <p id="summary-details"></p>
+            <div class="button">
+                <!-- Clickable Link as a Button -->
+                <a href="https://zeinithvitalitygroupe1kx.setmore.com/zeinithvitalitygroup" target="_blank" class="appointment-link">
+                    Book Your Appointment
+                </a>
             </div>
         </div>
+        
+
+
+
+       
         </div>
     </div>
 
@@ -311,4 +236,6 @@
 
 </body>
 </html>
+
+
 
