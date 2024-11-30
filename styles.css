@@ -80,6 +80,7 @@ nav a:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    color:#d4af37;
 }
 
 .service-card {
