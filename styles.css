@@ -192,8 +192,8 @@ footer {
     border-radius: 8px;
     text-align: left;
     position: absolute;
-    right: 0%;
-    top: 80%;
+    right: 80%;
+    top: 20%;
 }
 
 .nappointment-booking h2 {
