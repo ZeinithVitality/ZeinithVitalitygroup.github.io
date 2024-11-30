@@ -156,76 +156,7 @@ footer .social-icon:hover {
     color: #b8860b;
 }
 
-.nappointment-booking {
-    text-align: center;
-    padding: 20px 15px;
-}
 
-ebutton {
-    background-color: #d4af37; /* Green */
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-ebutton:hover {
-    background-color: #d4af37; /* Darker green on hover */
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.ebutton {
-    margin-top: 40px;
-    padding: 15px;
-    border: 1px solid darkgrey;
-    background-color: black;
-    border-radius: 8px;
-    text-align: left;
-    position: absolute;
-    left: 80%;
-    top: 80%;
-}
-
-.nappointment-booking h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #d4af37;
-    position: absolute;
-    left: 65%;
-}
-
-.nappointment-booking .ebutton .nappointment-link {
-    background-color: black; /* Button background color */
-    color: #d4af37; /* Text color */
-    font-size: 16px;
-    padding: 30px 5px;
-    border: none;
-    border-radius: 5px;
-    display: inline-block; /* Makes the link look like a button */
-    width: 100%; /* Full width */
-    max-width: 100%; /* Ensures it doesn’t overflow */
-    text-align: center;
-    text-decoration: none; /* Removes underline from the link */
-    white-space: normal; /* Allows text to wrap */
-    word-break: break-all; /* Breaks long words or URLs to fit in the button */
-    overflow-wrap: break-word;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Smooth hover effect */
-}
-
-.nappointment-booking .ebutton .nappointment-link:hover {
-    background-color: white; /* Darker shade on hover */
-}
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     nav {
