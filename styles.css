@@ -196,7 +196,7 @@ footer {
     top: 80%;
 }
 
-.appointment-booking h2 {
+.nappointment-booking h2 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #d4af37;
@@ -204,7 +204,7 @@ footer {
     left: 65%;
 }
 
-.nappointment-booking .button .appointment-link {
+.nappointment-booking .ebutton .nappointment-link {
     background-color: black; /* Button background color */
     color: #d4af37; /* Text color */
     font-size: 16px;
@@ -223,7 +223,7 @@ footer {
     transition: background-color 0.3s; /* Smooth hover effect */
 }
 
-.nappointment-booking .button .appointment-link:hover {
+.nappointment-booking .ebutton .nappointment-link:hover {
     background-color: white; /* Darker shade on hover */
 }
 /* Media Queries for Responsiveness */
