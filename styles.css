@@ -161,7 +161,7 @@ footer .social-icon:hover {
     padding: 20px 15px;
 }
 
-button {
+ebutton {
     background-color: #d4af37; /* Green */
     color: white;
     border: none;
@@ -175,7 +175,7 @@ button {
     border-radius: 5px;
 }
 
-button:hover {
+ebutton:hover {
     background-color: #d4af37; /* Darker green on hover */
 }
 
@@ -184,7 +184,7 @@ footer {
     margin-top: 20px;
 }
 
-.button {
+.ebutton {
     margin-top: 40px;
     padding: 15px;
     border: 1px solid darkgrey;
@@ -192,8 +192,8 @@ footer {
     border-radius: 8px;
     text-align: left;
     position: absolute;
-    right: 87%;
-    top: 50%;
+    right: 0%;
+    top: 80%;
 }
 
 .appointment-booking h2 {
