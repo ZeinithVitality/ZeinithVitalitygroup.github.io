@@ -3,234 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IV Drips Menu</title>
+    <title>IV Drips Gallery</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="ivdrips.css"> <!-- Link to external CSS file -->
 </head>
 <body>
-     <div class=service-card>
-    <a href="index.html" class="back-button">Back</a>
-     </div>
-
-    <h1>Our IV Drips Menu</h1>
-    <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Drip Name & Description</th>
-                    <th>200ml</th>
-                    <th>1L</th>
-                </tr>
-            </thead>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Anti-Aging Drip</strong> - “Unlock timeless beauty from within”<br>Combat signs of aging with essential nutrients to rejuvenate skin and vitality. Age gracefully with lasting radiance.</td>
-                <td>Option 1: R1000.00<br>Option 2: R1250.00</td>
-                <td>Option 1: R1900.00<br>Option 2: R2400.00</td>
-            </tr>
-            <tr>
-                <td><strong>Skin Glow-Up Drip</strong> - “Glow brighter than ever before”<br>Infuse your skin with vitamins and antioxidants to enhance your complexion and radiate youthful beauty.</td>
-                <td>R490.00</td>
-                <td>R980.00</td>
-            </tr>
-            <tr>
-                <td><strong>Weight Loss Fat Burner Drip</strong> - “Sculpt your body, redefine yourself”<br>Kickstart fat loss with targeted nutrients that accelerate metabolism and aid in weight management.</td>
-                <td>R980.00</td>
-                <td>R1800.00</td>
-            </tr>
-            <tr>
-                <td><strong>Immune Boost Drip</strong> - “Fortify your defense, stay unstoppable”<br>Strengthen your immune system with powerful vitamins and antioxidants, keeping you strong and resilient.</td>
-                <td>R450.00</td>
-                <td>R800.00</td>
-            </tr>
-            <tr>
-                <td><strong>Jet Fuel Drip</strong> - “Revitalize your energy, fuel your day”<br>Maximize endurance with this energy-boosting drip, perfect for gym-goers and athletes.</td>
-                <td>R900.00</td>
-                <td>R1100.00</td>
-            </tr>
-            <tr>
-                <td><strong>Rehydration Drip</strong> - “Hydrate, recover, refresh”<br>Replenish your body with essential electrolytes to keep you balanced and refreshed.</td>
-                <td>R250.00</td>
-                <td>R300.00</td>
-            </tr>
-            <tr>
-                <td><strong>Detox Drip</strong> - “Cleanse, renew, and rejuvenate”<br>Rid your body of toxins while revitalizing your system, leaving you feeling light and renewed.</td>
-                <td>R500.00</td>
-                <td>R800.00</td>
-            </tr>
-            <tr>
-                <td><strong>Multi-Vitamin Drip</strong> - “Nourish your body, unleash your potential”<br>A cocktail of essential vitamins to improve overall well-being and boost energy levels.</td>
-                <td>R1000.00</td>
-                <td>R1800.00</td>
-            </tr>
-            <tr>
-                <td><strong>Sport Vitality & Recovery Drip</strong> - “Recover faster, perform better”<br>Boost athletic recovery and muscle repair, ensuring peak performance and faster healing.</td>
-                <td>R800.00</td>
-                <td>R1100.00</td>
-            </tr>
-            <tr>
-                <td><strong>Hangover & Jet Lag Drip</strong> - “Bounce back, feel alive”<br>Recover from hangovers or long flights with rapid hydration and nutrients to energize and reset.</td>
-                <td>R1000.00</td>
-                <td>R1050.00</td>
-            </tr>
-            <tr>
-                <td><strong>Libido Drip</strong> - “Revive your passion, fuel your fire”<br>Boost vitality and enhance libido, reigniting your inner well-being.</td>
-                <td>R980</td>
-                <td>R1200</td>
-            </tr>
-            <tr>
-                <td><strong>Menopause Assist Drip</strong> - “Feel empowered, embrace change”<br>Alleviate hot flashes, mood swings, and support hormonal balance and well-being.</td>
-                <td>R1100.00</td>
-                <td>R1200.00</td>
-            </tr>
-            <tr>
-                <td><strong>Menstrual Assist Drip</strong> - “Find balance, ease the pain”<br>Relieve cramps, fatigue, and discomfort associated with menstruation by restoring essential nutrients.</td>
-                <td>R850</td>
-                <td>R1100</td>
-            </tr>
-        </tbody>
-        </table>
-
-        
-       <div class="appointment-booking">
-            <div class="button">
-                <!-- Clickable Link as a Button -->
-                <a href="https://zeinithvitalitygroupe1kx.setmore.com/zeinithvitalitygroup" target="_blank" class="appointment-link">
-                    Book Your Appointment
-                </a>
-            </div>
-            </div>
-        
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Zenith Vitality Group. All rights reserved.</p>
-    </footer>
-
-    <script>
-        let productCount = 1;
-        let cart = [];
-
-        // Function to update price based on product selection
-        function updatePrice(productIndex) {
-            const selectElement = document.getElementById(`product-select-${productIndex}`);
-            const selectedOption = selectElement.options[selectElement.selectedIndex];
-            const price = selectedOption.getAttribute('data-price');
-            const quantity = document.getElementById(`quantity-${productIndex}`).value;
-
-            document.getElementById(`price-${productIndex}`).innerText = price;
-            calculateTotal();
-        }
-
-        // Function to calculate total price
-        function calculateTotal() {
-            let total = 0;
-            cart = []; // Reset cart
-
-            for (let i = 1; i <= productCount; i++) {
-                const selectElement = document.getElementById(`product-select-${i}`);
-                const selectedOption = selectElement.options[selectElement.selectedIndex];
-                const price = Number(selectedOption.getAttribute('data-price'));
-                const quantity = Number(document.getElementById(`quantity-${i}`).value);
-
-                if (price > 0 && quantity > 0) {
-                    total += price * quantity;
-                    cart.push({
-                        name: selectedOption.text,
-                        price: price,
-                        quantity: quantity
-                    });
-                }
-            }
-
-            document.getElementById('grand-total').innerText = total;
-        }
-
-        // Function to proceed to checkout
-        function checkout() {
-            // Store cart in localStorage before redirecting
-            localStorage.setItem('cart', JSON.stringify(cart));
-            // Redirect to checkout page
-            window.location.href = 'checkout.html';
-        }
-
-        // Function to add a new product selection
-        function addProduct() {
-            productCount++;
-            const productSelectionsDiv = document.getElementById('product-selections');
+    <a href="index.html" class="back-button">← Back</a>
+<header>
+        <h1>Our IV Drip Menu</h1>
+    </header>
+    
+    <section class="gallery">
+        <img src="Img10.jpeg" alt="IV Drip 10" class="gallery-image">
+        <img src="Img11.jpeg" alt="IV Drip 11" class="gallery-image">
+        <img src="Img5.jpeg" alt="IV Drip 5" class="gallery-image">
+        <img src="Img1.jpeg" alt="IV Drip 5" class="gallery-image">
+        <img src="Img2.jpeg" alt="IV Drip 2" class="gallery-image">
+        <img src="Img3.jpeg" alt="IV Drip 3" class="gallery-image">
+        <img src="Img4.jpeg" alt="IV Drip 4" class="gallery-image">
+        <img src="Img6.jpeg" alt="IV Drip 6" class="gallery-image">
+        <img src="Img7.jpeg" alt="IV Drip 7" class="gallery-image">
+        <img src="Img8.jpeg" alt="IV Drip 8" class="gallery-image">
+        <img src="Img9.jpeg" alt="IV Drip 9" class="gallery-image">
+        <img src="Img12.jpeg" alt="IV Drip 12" class="gallery-image">
+        <img src="Img13.jpeg" alt="IV Drip 13" class="gallery-image">
+        <img src="Img14.jpeg" alt="IV Drip 14" class="gallery-image">
+        <img src="Img15.jpeg" alt="IV Drip 15" class="gallery-image">
+        <img src="Img16.jpeg" alt="IV Drip 16" class="gallery-image">
+        <img src="Img17.jpeg" alt="IV Drip 17" class="gallery-image">
             
-            const newProductDiv = document.createElement('div');
-            newProductDiv.classList.add('product-item');
-            newProductDiv.id = `product-item-${productCount}`;
-            newProductDiv.innerHTML = `
-                <label for="product-select-${productCount}">Choose a product:</label>
-                <select id="product-select-${productCount}" onchange="updatePrice(${productCount})">
-                    <option value="0" data-price="0">Select a drip...</option>
-                    <option value="490" data-price="490">Weight Loss Fat Burner Drip (200ml) - R490</option>
-                    <option value="980" data-price="980">Weight Loss Fat Burner Drip (1L) - R980</option>
-                    <option value="450" data-price="450">Immune Boost Drip (200ml) - R450</option>
-                    <option value="800" data-price="800">Immune Boost Drip (1L) - R800</option>
-                    <option value="900" data-price="900">Jet Fuel Drip (200ml) - R900</option>
-                    <option value="1100" data-price="1100">Jet Fuel Drip (1L) - R1100</option>
-                </select>
-
-                <label for="quantity-${productCount}">Quantity:</label>
-                <input type="number" id="quantity-${productCount}" value="1" min="1" onchange="calculateTotal()">
-
-                <p>Price: R<span id="price-${productCount}">0</span></p>
-            `;
-
-            productSelectionsDiv.appendChild(newProductDiv);
-        }
-    </script>
+    </section>
+   
+    
 
 
 
-<script>
-    // Function to toggle address input visibility based on appointment type
-    document.getElementById('appointment-type').addEventListener('change', function() {
-        const appointmentType = this.value;
-        const addressSection = document.getElementById('address-section');
-        if (appointmentType === 'house-call' || appointmentType === 'office-call') {
-            addressSection.style.display = 'block'; // Show address input for house/office calls
-        } else {
-            addressSection.style.display = 'none'; // Hide address input for on-site
-        }
-    });
-
-    // Function to handle booking
-    function bookAppointment() {
-        const appointmentType = document.getElementById('appointment-type').value;
-        const appointmentDate = document.getElementById('appointment-date').value;
-        const appointmentTime = document.getElementById('appointment-time').value;
-        const address = document.getElementById('address').value;
-
-        if (!appointmentType || !appointmentDate || !appointmentTime) {
-            alert('Please fill out all required fields.');
-            return;
-        }
-
-        // Show summary of the booking
-        const summaryDetails = document.getElementById('summary-details');
-        let summaryText = `Appointment Type: ${appointmentType} <br> Date: ${appointmentDate} <br> Time: ${appointmentTime}`;
-
-        if (appointmentType === 'house-call' || appointmentType === 'office-call') {
-            if (!address) {
-                alert('Please provide an address for house/office calls.');
-                return;
-            }
-            summaryText += `<br> Address: ${address}`;
-        }
-
-        summaryDetails.innerHTML = summaryText;
-        document.getElementById('booking-summary').style.display = 'block';
-    }
-</script>
-
+    <section class="booking">
+        <h2>Book Your Appointment</h2>
+        <div class="button">
+            <!-- Clickable Link as a Button -->
+            <a href="https://zeinithvitalitygroupe1kx.setmore.com/zeinithvitalitygroup" target="_blank" class="appointment-link">
+                Book Now
+            </a>
+        
+    </section>
+    
 </body>
 </html>
+
 
 
 
