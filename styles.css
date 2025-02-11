@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
     color: #f0e68c; /* This is your text colour*/
@@ -11,10 +10,11 @@ body {
 nav {
     background-color: #333;
     color: white;
-    padding: 10px 20px;  
+    padding: 10px 20px;
+    display: flex;
     justify-content: space-between;
-    align-items: left;
-   
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -64,7 +64,7 @@ nav a:hover {
 /* Services Section. i have mentioned that i dont have the actual pictures */
 .services {
     padding: 40px 20px;
-    background-color: darkgrey;
+    background-color: #2f2f2f;
     text-align: center;
 }
 
@@ -84,7 +84,7 @@ nav a:hover {
 }
 
 .service-card {
-    background-color: #2f2f2f;
+    background-color: darkgrey;
     padding: 20px;
     border-radius: 10px;
     width: 300px;
@@ -115,7 +115,7 @@ nav a:hover {
 /* About Section */
 .about {
     background-color: #2f2f2f;
-    padding: 50px 20px;
+    padding: 20px;
     color: #f0e68c;
     text-align: center;
 }
@@ -129,6 +129,15 @@ nav a:hover {
     line-height: 1.6;
     margin-bottom: 15px;
     font-size: 1rem;
+}
+
+.about-container {
+    border: 10px solid grey; /* Grey Border */
+    padding: 20px;
+    margin: auto;
+    width: 80%;
+    border-radius: 10px; /* Optional: To make the border slightly rounded */
+    background-color: #444; /* Slightly lighter dark grey for contrast */
 }
 
 /* Footer Section */
@@ -155,7 +164,6 @@ footer .social-icon {
 footer .social-icon:hover {
     color: #b8860b;
 }
-
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -210,3 +218,25 @@ footer .social-icon:hover {
         font-size: 0.8rem;
     }
 }
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #ffcc00; /* Yellow */
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.back-button:hover {
+    background-color: #e6b800; /* Slightly darker yellow */
+    transform: scale(1.05);
+}
+
