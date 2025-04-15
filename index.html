@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zeinith Vitality Group</title>
+    
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="ivdrips.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -11,8 +12,8 @@
 </head>
 <body>
 
-    <!-- Navigation Links -->
-    <nav>
+
+     <nav>
         <a href="#home">Home</a>
         <a href="#products">Products</a>
         <a href="#about">About Us</a>
@@ -31,6 +32,68 @@
         <a href="#products" class="btn">Shop Now</a>
         </div>
     </header>
+</section>
+
+<section id="Team"  class="Team2">
+  <h2>Meet Our Team</h2>
+  </section>
+  <br></br>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="Max.jpg" alt="Team Member 3">
+            <div class="name">Max – Founder & CEO</div>
+            <p class="short-desc">A visionary entrepreneur Max is on a mission to transform the health industry with cutting-edge solutions.</p>
+            <p class="more-text" id="max-info">He has built and managed multiple thriving businesses, proving that innovation, strategy, and relentless determination are what truly define success. His leadership makes Zenith more than a brand—it’s a revolution in wellness.</p>
+            <button class="toggle-btn" onclick="toggleInfo('max-info', this)">Read More</button>
+        </div>
+    
+        <div class="team-member">
+            <img src="Dr.jpg" alt="Team Member 3">
+            <div class="name">Dr. Mogotsi Dikgang – Medical Doctor</div>
+            <p class="short-desc">With 17 years of medical excellence and over a decade in healthcare management, Dr. Dikgang is the backbone of our medical expertise.</p>
+            <p class="more-text" id="dr-dikgang-info">A natural leader and mentor, he ensures that every treatment at Zenith is guided by science, precision, and a patient-first approach. Your health isn’t just a profession to him—it’s a lifelong commitment.</p>
+            <button class="toggle-btn" onclick="toggleInfo('dr-dikgang-info', this)">Read More</button>
+        </div>
+    
+        <div class="team-member">
+            <img src="Millicent.jpg" alt="Team Member 3">
+            <div class="name">Millicent Mtshali Ngwenya – Professional Nurse</div>
+            <p class="short-desc">Millie is the perfect blend of compassion and expertise.</p>
+            <p class="more-text" id="millicent-info">With extensive experience in ICU, surgical, and private wards, she delivers personalized care with unmatched precision. From IV drips to chronic disease management, her hands-on approach ensures every client receives world-class treatment with a touch of warmth and care.</p>
+            <button class="toggle-btn" onclick="toggleInfo('millicent-info', this)">Read More</button>
+        </div>
+    
+        <div class="team-member">
+            <img src="Imile.jpg" alt="Team Member 3">
+            <div class="name">Imile – Paramedic</div>
+            <p class="short-desc">Specialist in emergency response and life-saving care.</p>
+            <p class="more-text" id="emil-info">An Advanced Life Support Paramedic with 14 years experience in Emergency Medicine, specialist training in Advanced Cardiovascular Life Support, Pediatric Advanced Life Support, International Trauma Life Support, and Aeromedical Medicine. Imile has vast experience in both Private and Government sectors as well as remote medicine.</p>
+            <button class="toggle-btn" onclick="toggleInfo('emil-info', this)">Read More</button>
+        </div>
+
+        <div class="team-member">
+            <img src="Ezra.jpg" alt="Team Member 3">
+            <div class="name">Ezra - Head of Operations</div>
+            <p class="short-desc">Ezra, our Head of Operations, is the silent force that makes everything move with purpose.</p>
+            <p class="more-text" id="email-info">Sharp-minded, stylish, and relentlessly efficient—he brings structure, finesse, and fearless execution to every project. When Ezra’s on it, excellence isn't optional, it’s guaranteed.</p>
+            <button class="toggle-btn" onclick="toggleInfo('emil-info', this)">Read More</button>
+        </div>
+        </div>
+
+    <script>
+       function toggleInfo(id, button) {
+            var content = document.getElementById(id);
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                button.innerText = "Read More";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                button.innerText = "Read Less";
+            }
+        }
+    </script>
+
 </section>
 
 <section id="products" class="services">
@@ -55,6 +118,8 @@
                 <br></br>
                 <a href="https://zeinithvitalitygroupe1kx.setmore.com/zeinithvitalitygroup" class="cta-button">Book Your Session Now</a>
             </div>
+    
+           
         </div>
  </section>
 
@@ -64,6 +129,7 @@
     <section id="about" class="about">
         <div class="about-container">
         <h2>About Us</h2>
+        <br></br>
         <p>Zenith Vitality Group is not just a brand we are the epitome of premium wellness.</p>
         <p> Our philosophy is simple to provide our clients with transformative experiences</p> 
         <p>that replenish not only the body but also the mind and soul. We pride ourselves</p>
@@ -79,6 +145,7 @@
      <section id="contact"></section>
     <footer class="contact">
         <h2>Contact Us</h2>
+        <br></br>
         <div class="social-links">
             
             <a href="https://wa.me/message/BIQ4VUNMY6QDI1" target="_blank" class="social-icon" title="WhatsApp">
@@ -120,5 +187,7 @@ function bookSession() {
 
 </body>
 </html>
+
+
 
 
