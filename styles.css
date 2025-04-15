@@ -13,7 +13,7 @@ nav {
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: left;
     flex-wrap: wrap;
 }
 
@@ -73,6 +73,8 @@ nav a:hover {
     color: #d4af37;
     margin-bottom: 20px;
     font-family: 'Times New Roman', Times, serif;
+    position:absolute;
+    left:33%;
 }
 
 .service-cards {
@@ -239,4 +241,80 @@ footer .social-icon:hover {
     background-color: #e6b800; /* Slightly darker yellow */
     transform: scale(1.05);
 }
+
+.team-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.team-section, h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #d4af37;
+    position:absolute;
+    left:45%;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.team-member {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color:#555;
+}
+
+.name {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.short-desc {
+    margin-bottom: 10px;
+}
+.more-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.toggle-btn {
+    background-color: #d4af37;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+    width: fit-content;
+}
+.toggle-btn:hover {
+    background-color: #0056b3;
+}
+
 
