@@ -79,6 +79,7 @@ nav a:hover {
     margin-bottom: 20px;
     font-family: 'Times New Roman', Times, serif;
     position:absolute;
+    text-align: center;
     left:33%;
 }
 
@@ -130,6 +131,7 @@ nav a:hover {
 .about h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    text-align:center;
 }
 
 .about p {
@@ -186,6 +188,7 @@ footer .social-icon:hover {
 
     .services h2 {
         font-size: 1.5rem;
+        text-align: center;
     }
 
     .service-card {
@@ -195,6 +198,7 @@ footer .social-icon:hover {
 
     .about h2 {
         font-size: 1.8rem;
+        text-align: center;
     }
 
     .about p {
@@ -219,6 +223,7 @@ footer .social-icon:hover {
 
     .about h2 {
         font-size: 1.5rem;
+        text-align:center;
     }
 
     .about p {
