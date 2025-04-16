@@ -5,6 +5,11 @@ body {
     margin: 0;
     padding: 0;
 }
+.background-img{
+    height:auto;
+    display: block;
+    max-width: 100%;
+}
 
 /* Navigation starts here */
 nav {
