@@ -8,8 +8,10 @@ body {
 .background-img{
     height:auto;
     display: block;
-    max-width: 100%;
+    width: 100%;
 }
+
+
 
 /* Navigation starts here */
 nav {
@@ -18,7 +20,8 @@ nav {
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
-    align-items: left;
+    align-items: right;
+    text-align: right;
     flex-wrap: wrap;
 }
 
@@ -79,7 +82,6 @@ nav a:hover {
     margin-bottom: 20px;
     font-family: 'Times New Roman', Times, serif;
     position:absolute;
-    text-align: center;
     left:33%;
 }
 
@@ -131,7 +133,6 @@ nav a:hover {
 .about h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    text-align:center;
 }
 
 .about p {
@@ -175,38 +176,16 @@ footer .social-icon:hover {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero .btn {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-
-    .services h2 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .service-card {
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    .about h2 {
-        font-size: 1.8rem;
-        text-align: center;
-    }
-
-    .about p {
-        font-size: 0.9rem;
+@media (max-width: 380px) {
+   
+ .background-img{
+        height:auto;
+        display: block;
+        width: 100%;
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 110px) and (max-width: 600px) {
     nav a {
         margin: 5px 0;
         font-size: 0.9rem;
@@ -223,14 +202,78 @@ footer .social-icon:hover {
 
     .about h2 {
         font-size: 1.5rem;
-        text-align:center;
     }
 
     .about p {
         font-size: 0.8rem;
     }
+
+    .background-img{
+        height:auto;
+        display: block;
+        width: 100%;
+    }
 }
 
+@media (min-width: 601px) and (max-width: 786px) {
+    nav a {
+        margin: 5px 0;
+        font-size: 0.9rem;
+    }
+
+    .hero .btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .services h2 {
+        font-size: 1.2rem;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        font-size: 0.8rem;
+    }
+
+    .background-img{
+        height:auto;
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+    nav a {
+        margin: 5px 0;
+        font-size: 0.9rem;
+    }
+
+    .hero .btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .services h2 {
+        font-size: 1.2rem;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        font-size: 0.8rem;
+    }
+
+    .background-img{
+        height:auto;
+        display: block;
+        width: 100%;
+    }
+}
 .back-button {
     display: inline-block;
     padding: 10px 20px;
@@ -326,5 +369,7 @@ footer .social-icon:hover {
 .toggle-btn:hover {
     background-color: #0056b3;
 }
+
+
 
 
